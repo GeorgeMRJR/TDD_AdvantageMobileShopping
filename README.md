@@ -1,2 +1,2 @@
-# TDD_AdvantageOnlineShopping
-Teste TDD da loja online "Advantage Online Shopping"
+# TDD_AdvantageMobileShopping
+Teste TDD do aplicativo android AdvantageMobileShopping
