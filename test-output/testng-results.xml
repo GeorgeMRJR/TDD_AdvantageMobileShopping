@@ -1,53 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23564" started-at="2020-01-31T10:02:03 BRT" finished-at="2020-01-31T10:02:27 BRT">
+  <suite name="Default suite" duration-ms="16851" started-at="2020-02-01T15:57:54 BRT" finished-at="2020-02-01T15:58:11 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23564" started-at="2020-01-31T10:02:03 BRT" finished-at="2020-01-31T10:02:27 BRT">
-      <class name="test.AdvantageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="setUp" is-config="true" duration-ms="8344" started-at="2020-01-31T10:02:03 BRT" finished-at="2020-01-31T10:02:11 BRT">
+    <test name="Default test" duration-ms="16851" started-at="2020-02-01T15:57:54 BRT" finished-at="2020-02-01T15:58:11 BRT">
+      <class name="br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest">
+        <test-method status="PASS" signature="setUpReport()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4e7dc304]" name="setUpReport" is-config="true" duration-ms="79" started-at="2020-02-01T15:57:54 BRT" finished-at="2020-02-01T15:57:55 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpReport -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4e7dc304]" name="setUp" is-config="true" duration-ms="10746" started-at="2020-02-01T15:57:55 BRT" finished-at="2020-02-01T15:58:05 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deveAbrirUmProdutoPelaCategoria()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="deveAbrirUmProdutoPelaCategoria" duration-ms="4505" started-at="2020-01-31T10:02:11 BRT" finished-at="2020-01-31T10:02:16 BRT">
+        <test-method status="PASS" signature="deveAbrirUmProdutoPelaCategoria()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4e7dc304]" name="deveAbrirUmProdutoPelaCategoria" duration-ms="4659" started-at="2020-02-01T15:58:05 BRT" finished-at="2020-02-01T15:58:10 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deveAbrirUmProdutoPelaCategoria -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="tearDown" is-config="true" duration-ms="1729" started-at="2020-01-31T10:02:16 BRT" finished-at="2020-01-31T10:02:18 BRT">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4e7dc304]" name="tearDown" is-config="true" duration-ms="1338" started-at="2020-02-01T15:58:10 BRT" finished-at="2020-02-01T15:58:11 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deveAbrirUmProdutoPelaCategoria status=SUCCESS method=DeveAbrirUmProdutoPelaHomeTest.deveAbrirUmProdutoPelaCategoria()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4e7dc304] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="setUp" is-config="true" duration-ms="1" started-at="2020-01-31T10:02:18 BRT" finished-at="2020-01-31T10:02:18 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deveBuscarUmProdutoExistente()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="deveBuscarUmProdutoExistente" duration-ms="2954" started-at="2020-01-31T10:02:18 BRT" finished-at="2020-01-31T10:02:21 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deveBuscarUmProdutoExistente -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="tearDown" is-config="true" duration-ms="1524" started-at="2020-01-31T10:02:21 BRT" finished-at="2020-01-31T10:02:22 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="deveBuscarUmProdutoInexistente()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="deveBuscarUmProdutoInexistente" duration-ms="2632" started-at="2020-01-31T10:02:22 BRT" finished-at="2020-01-31T10:02:25 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deveBuscarUmProdutoInexistente -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="setUp" is-config="true" duration-ms="0" started-at="2020-01-31T10:02:22 BRT" finished-at="2020-01-31T10:02:22 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="tearDown" is-config="true" duration-ms="1309" started-at="2020-01-31T10:02:25 BRT" finished-at="2020-01-31T10:02:26 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:test.AdvantageTest@4f063c0a]" name="tearDownClass" is-config="true" duration-ms="528" started-at="2020-01-31T10:02:26 BRT" finished-at="2020-01-31T10:02:27 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- test.AdvantageTest -->
+      </class> <!-- br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -15,9 +15,27 @@ public class MenuPage {
 
 	@FindBy(id = "com.Advantage.aShopping:id/textViewMenuUser")
 	private WebElement login;
+	
+	@FindBy(id = "com.Advantage.aShopping:id/textViewMenuSignOut")
+	private WebElement logOut;
+	
+	@FindBy(id = "com.Advantage.aShopping:id/imageViewMenu")
+	private WebElement menu;
+	
+	public void abrir() {
+		menu.click();
+	}
 
 	public void clicarLogin() {
 		login.click();
+	}
+	
+	public boolean logado() {
+		try {
+			return logOut.isDisplayed();
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 }
