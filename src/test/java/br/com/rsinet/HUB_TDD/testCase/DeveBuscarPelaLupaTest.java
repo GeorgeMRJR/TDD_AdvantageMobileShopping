@@ -52,7 +52,7 @@ public class DeveBuscarPelaLupaTest {
 	@Test
 	public void deveBuscarUmProdutoExistente() throws InterruptedException {
 
-		// report
+//		// report
 		testName = new Throwable().getStackTrace()[0].getMethodName();
 		test = ExtentReport.createTest(testName);
 
@@ -62,7 +62,7 @@ public class DeveBuscarPelaLupaTest {
 		homePage.clicarLupa();
 		buscaPage.clicarproduto();
 		String atual = produtoPage.nomeProduto();
-		
+
 		Assert.assertEquals(atual, produto);
 	}
 
@@ -78,7 +78,7 @@ public class DeveBuscarPelaLupaTest {
 		homePage.buscar(produto);
 		homePage.clicarLupa();
 		String txtNaoEncontrado = buscaPage.ProdutoNaoEncontrado();
-		
+
 		Assert.assertTrue(txtNaoEncontrado.contains(produto));
 	}
 

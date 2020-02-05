@@ -13,9 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.HUB_TDD.manager.DriverFactory;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class CadastroPage {
+public class CadastroPage extends BasePage {
 
 	public CadastroPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -41,36 +42,36 @@ public class CadastroPage {
 
 	@FindBy(xpath = "//*[@resource-id='com.Advantage.aShopping:id/AosEditTextLastName']/child::*[1]")
 	private WebElement sobreNome;
-	
+
 	@FindBy(xpath = "//*[@resource-id='com.Advantage.aShopping:id/AosEditTextPhoneNumber']/child::*[1]")
 	private WebElement telefone;
-	
+
 	@FindBy(xpath = "//*[@resource-id='com.Advantage.aShopping:id/AosEditTextState']/child::*[1]")
 	private WebElement estado;
-	
+
 	@FindBy(xpath = "//*[@resource-id='com.Advantage.aShopping:id/AosEditTextCity']/child::*[1]")
 	private WebElement cidade;
-	
+
 	@FindBy(xpath = "//*[@resource-id='com.Advantage.aShopping:id/AosEditTextStreet']/child::*[1]")
 	private WebElement endereco;
-	
+
 	@FindBy(xpath = "//*[@resource-id='com.Advantage.aShopping:id/AosEditTextZip']/child::*[1]")
 	private WebElement cep;
-	
-	@FindBy(id = "com.Advantage.aShopping:id/textViewCountriesTitle")
+
+	@FindBy(id = "com.Advantage.aShopping:id/linearLayoutCountry")
 	private WebElement continente;
 
 	@FindBy(xpath = "//*[@resource-id='com.Advantage.aShopping:id/select_dialog_listview']")
 	private WebElement continentes;
-	
+
 	@FindBy(className = "android.widget.Button")
 	private WebElement btnRegistrar;
-	
+
 	public CadastroPage enter() throws MalformedURLException {
-		(new TouchAction(DriverFactory.getDriver())).tap(PointOption.point(985, 1699)).perform();
+		(new TouchAction<>(DriverFactory.getDriver())).tap(PointOption.point(985, 1699)).perform();
 		return this;
 	}
-	
+
 	public CadastroPage digitarUserName(String userNameTxt) {
 		uername.click();
 		uername.sendKeys(userNameTxt);
@@ -106,43 +107,48 @@ public class CadastroPage {
 		sobreNome.sendKeys(sobreNomeTxt);
 		return this;
 	}
-	
+
 	public CadastroPage digitarTelefone(String telefoneTxt) {
 		telefone.click();
 		telefone.sendKeys(telefoneTxt);
 		return this;
 	}
-	
+
 	public CadastroPage digitarEstado(String estadoTxt) {
 		estado.click();
 		estado.sendKeys(estadoTxt);
 		return this;
 	}
-	
+
 	public CadastroPage digitarCidade(String cidadeTxt) {
 		cidade.click();
 		cidade.sendKeys(cidadeTxt);
 		return this;
 	}
-	
+
 	public CadastroPage digitarEndereco(String enderecoTxt) {
 		endereco.click();
 		endereco.sendKeys(enderecoTxt);
 		return this;
 	}
-	
+
 	public CadastroPage digitarCep(String cepTxt) {
 		cep.click();
 		cep.sendKeys(cepTxt);
 		return this;
 	}
-	
-	public CadastroPage clicarContinente() {
+
+	public CadastroPage escolherContinente(String visibleText) throws MalformedURLException {
 		continente.click();
+		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
+
+		scrollToText((AndroidDriver) DriverFactory.getDriver(), visibleText);
+		wait.until(
+				ExpectedConditions.visibilityOf(elementToText((AndroidDriver) DriverFactory.getDriver(), visibleText)));
+		clickToText((AndroidDriver) DriverFactory.getDriver(), visibleText);
 		return this;
 	}
-	
-	
+
 	public CadastroPage registrar() throws MalformedURLException {
 		try {
 			DriverFactory.getDriver().hideKeyboard();
@@ -150,24 +156,9 @@ public class CadastroPage {
 			e.printStackTrace();
 		}
 		btnRegistrar.click();
-		
+
 		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("com.Advantage.aShopping:id/imageViewMenu")));
-		
-		return this;
-	}
-
-	public CadastroPage scroll() {
-		try {
-			(new TouchAction(DriverFactory.getDriver()))
-			  .press(PointOption.point(508, 1130))
-			  .moveTo(PointOption.point(525,483))
-			  .release()
-			  .perform();
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
-		  
 
 		return this;
 	}

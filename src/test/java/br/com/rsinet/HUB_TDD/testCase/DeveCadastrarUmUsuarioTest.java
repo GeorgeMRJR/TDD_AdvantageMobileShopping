@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.Random;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
@@ -60,27 +61,28 @@ public class DeveCadastrarUmUsuarioTest {
 		// report
 		testName = new Throwable().getStackTrace()[0].getMethodName();
 		test = ExtentReport.createTest(testName);
-		
+
 		// teste
 		homePage.clicarMenu();
 		menuPage.clicarLogin();
 		loginPage.clicarNovaConta();
-		cadastroPage
-			.digitarUserName("georgeTeste4").enter()
-			.digitarEmail("aaaaaa@abcd.com").enter()
-			.digitarSenha("Abc123").enter()
-			.digitarReSenha("Abc123").enter()
-			.digitarNome("george").enter()
-			.digitarSobreNome("junior").enter()
-			.digitarTelefone("999888998").enter()
-			.digitarEstado("SP").enter()
-			.digitarEndereco("av. tal").enter()
-			.digitarCidade("sorocaba").enter()
-			.digitarCep("18060000").enter()
-			.scroll()
-			.registrar();
+		((CadastroPage) cadastroPage //
+				.digitarUserName("georgeTeste" + new Random().nextInt(1000)).enter() //
+				.digitarEmail("aaaaaa@abcd.com").enter() //
+				.digitarSenha("Abc123").enter() //
+				.digitarReSenha("Abc123").enter() //
+				.digitarNome("george").enter() //
+				.digitarSobreNome("junior").enter() //
+				.digitarTelefone("999888998").enter() //
+				.escolherContinente("China") //
+				.digitarEstado("SP").enter() //
+				.digitarEndereco("av. tal").enter() //
+				.digitarCidade("sorocaba").enter() //
+				.digitarCep("18060000").enter() //
+				.scroll(0.9, 0.2) //
+		).registrar(); //
 		homePage.clicarMenu();
-		
+
 		assertTrue(menuPage.logado());
 
 	}
@@ -97,22 +99,22 @@ public class DeveCadastrarUmUsuarioTest {
 		menuPage.clicarLogin();
 		loginPage.clicarNovaConta();
 
-		cadastroPage
-			.digitarUserName("georgeTeste4").enter()
-			.digitarEmail("aaaaaa@abcd.com").enter()
-			.digitarSenha("Abc123").enter()
-			.digitarReSenha("Abc123").enter()
-			.digitarNome("george").enter()
-			.digitarSobreNome("junior").enter()
-			.digitarTelefone("999888998").enter()
-			.digitarEstado("SP").enter()
-			.digitarEndereco("av. tal").enter()
-			.digitarCidade("sorocaba").enter()
-			.digitarCep("18060000").enter()
-			.scroll()
-			.registrar();
+		((CadastroPage) cadastroPage //
+				.digitarUserName("georgeTeste4").enter() //
+				.digitarEmail("aaaaaa@abcd.com").enter() //
+				.digitarSenha("Abc123").enter() //
+				.digitarReSenha("Abc123").enter() //
+				.digitarNome("george").enter()//
+				.digitarSobreNome("junior").enter() //
+				.digitarTelefone("999888998").enter() //
+				.digitarEstado("SP").enter() //
+				.digitarEndereco("av. tal").enter() //
+				.digitarCidade("sorocaba").enter() //
+				.digitarCep("18060000").enter() //
+				.scroll(0.9, 0.2) //
+		).registrar(); //
 		homePage.clicarMenu();
-		
+
 		assertFalse(menuPage.logado());
 	}
 
