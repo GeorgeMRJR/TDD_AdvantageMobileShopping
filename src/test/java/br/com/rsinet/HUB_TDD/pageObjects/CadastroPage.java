@@ -142,10 +142,10 @@ public class CadastroPage extends BasePage {
 		continente.click();
 		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
 
-		scrollToText((AndroidDriver) DriverFactory.getDriver(), visibleText);
-		wait.until(
-				ExpectedConditions.visibilityOf(elementToText((AndroidDriver) DriverFactory.getDriver(), visibleText)));
-		clickToText((AndroidDriver) DriverFactory.getDriver(), visibleText);
+		scrollToText((AndroidDriver<?>) DriverFactory.getDriver(), visibleText);
+		wait.until(ExpectedConditions
+				.visibilityOf(elementToText((AndroidDriver<?>) DriverFactory.getDriver(), visibleText)));
+		clickToText((AndroidDriver<?>) DriverFactory.getDriver(), visibleText);
 		return this;
 	}
 

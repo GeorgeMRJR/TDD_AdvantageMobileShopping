@@ -44,30 +44,30 @@ public class HomePage extends BasePage {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		switch (Categoria) {
 		case "LAPTOPS":
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver) driver, "LAPTOPS")));
-			clickToText((AndroidDriver) driver, "LAPTOPS");
+			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "LAPTOPS")));
+			clickToText((AndroidDriver<?>) driver, "LAPTOPS");
 			break;
 
 		case "HEADPHONES":
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver) driver, "HEADPHONES")));
-			clickToText((AndroidDriver) driver, "HEADPHONES");
+			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "HEADPHONES")));
+			clickToText((AndroidDriver<?>) driver, "HEADPHONES");
 			break;
 
 		case "TABLETS":
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver) driver, "TABLETS")));
-			clickToText((AndroidDriver) driver, "TABLETS");
+			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "TABLETS")));
+			clickToText((AndroidDriver<?>) driver, "TABLETS");
 			break;
 
 		case "SPEAKERS":
-			scrollToText((AndroidDriver) driver, "SPEAKERS");
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver) driver, "SPEAKERS")));
-			clickToText((AndroidDriver) driver, "SPEAKERS");
+			scrollToText((AndroidDriver<?>) driver, "SPEAKERS");
+			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "SPEAKERS")));
+			clickToText((AndroidDriver<?>) driver, "SPEAKERS");
 			break;
 
 		case "MICE":
-			scrollToText((AndroidDriver) driver, "MICE");
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver) driver, "MICE")));
-			clickToText((AndroidDriver) driver, "MICE");
+			scrollToText((AndroidDriver<?>) driver, "MICE");
+			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "MICE")));
+			clickToText((AndroidDriver<?>) driver, "MICE");
 			break;
 
 		default:

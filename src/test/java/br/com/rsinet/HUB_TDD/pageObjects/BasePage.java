@@ -30,18 +30,18 @@ public class BasePage {
 
 	}
 
-	public void scrollToText(AndroidDriver driver, String visibleText) {
+	public void scrollToText(AndroidDriver<?> driver, String visibleText) {
 		driver.findElementByAndroidUIAutomator(
 				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""
 						+ visibleText + "\").instance(0))");
 	}
 
-	public void clickToText(AndroidDriver driver, String visibleText) {
+	public void clickToText(AndroidDriver<?> driver, String visibleText) {
 		driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"" + visibleText + "\")"))
 				.click();
 	}
 
-	public WebElement elementToText(AndroidDriver driver, String visibleText) {
+	public WebElement elementToText(AndroidDriver<?> driver, String visibleText) {
 		return driver
 				.findElement(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"" + visibleText + "\")"));
 	}
