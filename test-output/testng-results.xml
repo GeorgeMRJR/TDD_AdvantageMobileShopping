@@ -2,47 +2,47 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="caseTest" duration-ms="165948" started-at="2020-02-06T18:16:01 BRT" finished-at="2020-02-06T18:18:47 BRT">
+  <suite name="caseTest" duration-ms="209615" started-at="2020-02-07T13:53:04 BRT" finished-at="2020-02-07T13:56:34 BRT">
     <groups>
     </groups>
-    <test name="testngTest" duration-ms="165948" started-at="2020-02-06T18:16:01 BRT" finished-at="2020-02-06T18:18:47 BRT">
+    <test name="testngTest" duration-ms="209615" started-at="2020-02-07T13:53:04 BRT" finished-at="2020-02-07T13:56:34 BRT">
       <class name="br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest">
-        <test-method status="PASS" signature="setUpReport()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@48503868]" name="setUpReport" is-config="true" duration-ms="0" started-at="2020-02-06T18:16:01 BRT" finished-at="2020-02-06T18:16:01 BRT">
+        <test-method status="PASS" signature="setUpReport()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@53f65459]" name="setUpReport" is-config="true" duration-ms="0" started-at="2020-02-07T13:53:04 BRT" finished-at="2020-02-07T13:53:04 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@48503868]" name="setUp" is-config="true" duration-ms="6904" started-at="2020-02-06T18:16:49 BRT" finished-at="2020-02-06T18:16:56 BRT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@53f65459]" name="setUp" is-config="true" duration-ms="9455" started-at="2020-02-07T13:54:03 BRT" finished-at="2020-02-07T13:54:12 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deveBuscarUmProdutoExistente()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@48503868]" name="deveBuscarUmProdutoExistente" duration-ms="3778" started-at="2020-02-06T18:16:56 BRT" finished-at="2020-02-06T18:17:00 BRT">
+        <test-method status="PASS" signature="deveBuscarUmProdutoExistente()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@53f65459]" name="deveBuscarUmProdutoExistente" duration-ms="4151" started-at="2020-02-07T13:54:12 BRT" finished-at="2020-02-07T13:54:17 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deveBuscarUmProdutoExistente -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@48503868]" name="tearDown" is-config="true" duration-ms="916" started-at="2020-02-06T18:17:00 BRT" finished-at="2020-02-06T18:17:01 BRT">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@53f65459]" name="tearDown" is-config="true" duration-ms="1405" started-at="2020-02-07T13:54:17 BRT" finished-at="2020-02-07T13:54:18 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=deveBuscarUmProdutoExistente status=SUCCESS method=DeveBuscarPelaLupaTest.deveBuscarUmProdutoExistente()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@48503868] output={null}]]]>
+                <![CDATA[[TestResult name=deveBuscarUmProdutoExistente status=SUCCESS method=DeveBuscarPelaLupaTest.deveBuscarUmProdutoExistente()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@53f65459] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@48503868]" name="setUp" is-config="true" duration-ms="7093" started-at="2020-02-06T18:17:01 BRT" finished-at="2020-02-06T18:17:08 BRT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@53f65459]" name="setUp" is-config="true" duration-ms="9410" started-at="2020-02-07T13:54:18 BRT" finished-at="2020-02-07T13:54:27 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deveBuscarUmProdutoInexistente()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@48503868]" name="deveBuscarUmProdutoInexistente" duration-ms="3397" started-at="2020-02-06T18:17:08 BRT" finished-at="2020-02-06T18:17:11 BRT">
+        <test-method status="PASS" signature="deveBuscarUmProdutoInexistente()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@53f65459]" name="deveBuscarUmProdutoInexistente" duration-ms="3534" started-at="2020-02-07T13:54:27 BRT" finished-at="2020-02-07T13:54:31 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deveBuscarUmProdutoInexistente -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@48503868]" name="tearDown" is-config="true" duration-ms="797" started-at="2020-02-06T18:17:11 BRT" finished-at="2020-02-06T18:17:12 BRT">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@53f65459]" name="tearDown" is-config="true" duration-ms="1166" started-at="2020-02-07T13:54:31 BRT" finished-at="2020-02-07T13:54:32 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=deveBuscarUmProdutoInexistente status=SUCCESS method=DeveBuscarPelaLupaTest.deveBuscarUmProdutoInexistente()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@48503868] output={null}]]]>
+                <![CDATA[[TestResult name=deveBuscarUmProdutoInexistente status=SUCCESS method=DeveBuscarPelaLupaTest.deveBuscarUmProdutoInexistente()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest@53f65459] output={null}]]]>
               </value>
             </param>
           </params>
@@ -51,42 +51,42 @@
         </test-method> <!-- tearDown -->
       </class> <!-- br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest -->
       <class name="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest">
-        <test-method status="PASS" signature="setUpReport()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@6895a785]" name="setUpReport" is-config="true" duration-ms="0" started-at="2020-02-06T18:16:01 BRT" finished-at="2020-02-06T18:16:01 BRT">
+        <test-method status="PASS" signature="setUpReport()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@3b088d51]" name="setUpReport" is-config="true" duration-ms="1" started-at="2020-02-07T13:53:04 BRT" finished-at="2020-02-07T13:53:04 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@6895a785]" name="setUp" is-config="true" duration-ms="7131" started-at="2020-02-06T18:17:12 BRT" finished-at="2020-02-06T18:17:19 BRT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@3b088d51]" name="setUp" is-config="true" duration-ms="9562" started-at="2020-02-07T13:54:32 BRT" finished-at="2020-02-07T13:54:42 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deveCadastrarUmUsuario()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@6895a785]" name="deveCadastrarUmUsuario" duration-ms="40097" started-at="2020-02-06T18:17:19 BRT" finished-at="2020-02-06T18:17:59 BRT">
+        <test-method status="PASS" signature="deveCadastrarUmUsuario()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@3b088d51]" name="deveCadastrarUmUsuario" duration-ms="50857" started-at="2020-02-07T13:54:42 BRT" finished-at="2020-02-07T13:55:33 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deveCadastrarUmUsuario -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@6895a785]" name="tearDown" is-config="true" duration-ms="1184" started-at="2020-02-06T18:17:59 BRT" finished-at="2020-02-06T18:18:01 BRT">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@3b088d51]" name="tearDown" is-config="true" duration-ms="1589" started-at="2020-02-07T13:55:33 BRT" finished-at="2020-02-07T13:55:34 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=deveCadastrarUmUsuario status=SUCCESS method=DeveCadastrarUmUsuarioTest.deveCadastrarUmUsuario()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@6895a785] output={null}]]]>
+                <![CDATA[[TestResult name=deveCadastrarUmUsuario status=SUCCESS method=DeveCadastrarUmUsuarioTest.deveCadastrarUmUsuario()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@3b088d51] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@6895a785]" name="setUp" is-config="true" duration-ms="7057" started-at="2020-02-06T18:18:01 BRT" finished-at="2020-02-06T18:18:08 BRT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@3b088d51]" name="setUp" is-config="true" duration-ms="9039" started-at="2020-02-07T13:55:34 BRT" finished-at="2020-02-07T13:55:43 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="naoDeveCadastrarUsuarioJaCadastrado()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@6895a785]" name="naoDeveCadastrarUsuarioJaCadastrado" duration-ms="38241" started-at="2020-02-06T18:18:08 BRT" finished-at="2020-02-06T18:18:46 BRT">
+        <test-method status="PASS" signature="naoDeveCadastrarUsuarioJaCadastrado()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@3b088d51]" name="naoDeveCadastrarUsuarioJaCadastrado" duration-ms="49360" started-at="2020-02-07T13:55:43 BRT" finished-at="2020-02-07T13:56:33 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- naoDeveCadastrarUsuarioJaCadastrado -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@6895a785]" name="tearDown" is-config="true" duration-ms="836" started-at="2020-02-06T18:18:46 BRT" finished-at="2020-02-06T18:18:47 BRT">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@3b088d51]" name="tearDown" is-config="true" duration-ms="1324" started-at="2020-02-07T13:56:33 BRT" finished-at="2020-02-07T13:56:34 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=naoDeveCadastrarUsuarioJaCadastrado status=SUCCESS method=DeveCadastrarUmUsuarioTest.naoDeveCadastrarUsuarioJaCadastrado()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@6895a785] output={null}]]]>
+                <![CDATA[[TestResult name=naoDeveCadastrarUsuarioJaCadastrado status=SUCCESS method=DeveCadastrarUmUsuarioTest.naoDeveCadastrarUsuarioJaCadastrado()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest@3b088d51] output={null}]]]>
               </value>
             </param>
           </params>
@@ -95,42 +95,42 @@
         </test-method> <!-- tearDown -->
       </class> <!-- br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest -->
       <class name="br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest">
-        <test-method status="PASS" signature="setUpReport()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@10bbd20a]" name="setUpReport" is-config="true" duration-ms="72" started-at="2020-02-06T18:16:01 BRT" finished-at="2020-02-06T18:16:01 BRT">
+        <test-method status="PASS" signature="setUpReport()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4d95d2a2]" name="setUpReport" is-config="true" duration-ms="77" started-at="2020-02-07T13:53:04 BRT" finished-at="2020-02-07T13:53:04 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@10bbd20a]" name="setUp" is-config="true" duration-ms="7130" started-at="2020-02-06T18:16:01 BRT" finished-at="2020-02-06T18:16:08 BRT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4d95d2a2]" name="setUp" is-config="true" duration-ms="9728" started-at="2020-02-07T13:53:04 BRT" finished-at="2020-02-07T13:53:14 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deveAbrirUmProdutoPelaCategoria()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@10bbd20a]" name="deveAbrirUmProdutoPelaCategoria" duration-ms="7372" started-at="2020-02-06T18:16:08 BRT" finished-at="2020-02-06T18:16:15 BRT">
+        <test-method status="PASS" signature="deveAbrirUmProdutoPelaCategoria()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4d95d2a2]" name="deveAbrirUmProdutoPelaCategoria" duration-ms="7638" started-at="2020-02-07T13:53:14 BRT" finished-at="2020-02-07T13:53:22 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deveAbrirUmProdutoPelaCategoria -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@10bbd20a]" name="tearDown" is-config="true" duration-ms="928" started-at="2020-02-06T18:16:15 BRT" finished-at="2020-02-06T18:16:16 BRT">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4d95d2a2]" name="tearDown" is-config="true" duration-ms="1454" started-at="2020-02-07T13:53:22 BRT" finished-at="2020-02-07T13:53:23 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=deveAbrirUmProdutoPelaCategoria status=SUCCESS method=DeveAbrirUmProdutoPelaHomeTest.deveAbrirUmProdutoPelaCategoria()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@10bbd20a] output={null}]]]>
+                <![CDATA[[TestResult name=deveAbrirUmProdutoPelaCategoria status=SUCCESS method=DeveAbrirUmProdutoPelaHomeTest.deveAbrirUmProdutoPelaCategoria()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4d95d2a2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@10bbd20a]" name="setUp" is-config="true" duration-ms="7107" started-at="2020-02-06T18:16:16 BRT" finished-at="2020-02-06T18:16:23 BRT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4d95d2a2]" name="setUp" is-config="true" duration-ms="8747" started-at="2020-02-07T13:53:23 BRT" finished-at="2020-02-07T13:53:32 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="naoDeveAceitarMaisDeDezItensNoCarrinho()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@10bbd20a]" name="naoDeveAceitarMaisDeDezItensNoCarrinho" duration-ms="24994" started-at="2020-02-06T18:16:23 BRT" finished-at="2020-02-06T18:16:48 BRT">
+        <test-method status="PASS" signature="naoDeveAceitarMaisDeDezItensNoCarrinho()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4d95d2a2]" name="naoDeveAceitarMaisDeDezItensNoCarrinho" duration-ms="29717" started-at="2020-02-07T13:53:32 BRT" finished-at="2020-02-07T13:54:02 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- naoDeveAceitarMaisDeDezItensNoCarrinho -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@10bbd20a]" name="tearDown" is-config="true" duration-ms="877" started-at="2020-02-06T18:16:48 BRT" finished-at="2020-02-06T18:16:49 BRT">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4d95d2a2]" name="tearDown" is-config="true" duration-ms="1365" started-at="2020-02-07T13:54:02 BRT" finished-at="2020-02-07T13:54:03 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=naoDeveAceitarMaisDeDezItensNoCarrinho status=SUCCESS method=DeveAbrirUmProdutoPelaHomeTest.naoDeveAceitarMaisDeDezItensNoCarrinho()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@10bbd20a] output={null}]]]>
+                <![CDATA[[TestResult name=naoDeveAceitarMaisDeDezItensNoCarrinho status=SUCCESS method=DeveAbrirUmProdutoPelaHomeTest.naoDeveAceitarMaisDeDezItensNoCarrinho()[pri:0, instance:br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest@4d95d2a2] output={null}]]]>
               </value>
             </param>
           </params>

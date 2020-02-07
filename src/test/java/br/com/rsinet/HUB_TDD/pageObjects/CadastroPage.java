@@ -9,12 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.com.rsinet.HUB_TDD.manager.DriverFactory;
-import io.appium.java_client.TouchAction;
+import br.com.rsinet.HUB_TDD.manager.Driver;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.offset.PointOption;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class CadastroPage extends BasePage {
 
@@ -68,7 +67,8 @@ public class CadastroPage extends BasePage {
 	private WebElement btnRegistrar;
 
 	public CadastroPage enter() throws MalformedURLException {
-		(new TouchAction<>(DriverFactory.getDriver())).tap(PointOption.point(985, 1699)).perform();
+//		(new TouchAction<>(DriverFactory.getDriver())).tap(PointOption.point(985, 1699)).perform();
+		Driver.getDriver().pressKey(new KeyEvent(AndroidKey.ENTER));
 		return this;
 	}
 
@@ -140,25 +140,24 @@ public class CadastroPage extends BasePage {
 
 	public CadastroPage escolherContinente(String visibleText) throws MalformedURLException {
 		continente.click();
-		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
 
-		scrollToText((AndroidDriver<?>) DriverFactory.getDriver(), visibleText);
-		wait.until(ExpectedConditions
-				.visibilityOf(elementToText((AndroidDriver<?>) DriverFactory.getDriver(), visibleText)));
-		clickToText((AndroidDriver<?>) DriverFactory.getDriver(), visibleText);
+		scrollToText((AndroidDriver<?>) Driver.getDriver(), visibleText);
+		Driver.getWait().until(
+				ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) Driver.getDriver(), visibleText)));
+		clickToText((AndroidDriver<?>) Driver.getDriver(), visibleText);
 		return this;
 	}
 
 	public CadastroPage registrar() throws MalformedURLException {
 		try {
-			DriverFactory.getDriver().hideKeyboard();
+			Driver.getDriver().hideKeyboard();
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 		btnRegistrar.click();
 
-		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("com.Advantage.aShopping:id/imageViewMenu")));
+		Driver.getWait()
+				.until(ExpectedConditions.presenceOfElementLocated(By.id("com.Advantage.aShopping:id/imageViewMenu")));
 
 		return this;
 	}

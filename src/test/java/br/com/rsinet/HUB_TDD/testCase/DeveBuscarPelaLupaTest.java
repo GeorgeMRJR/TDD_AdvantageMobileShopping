@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.HUB_TDD.manager.DriverFactory;
+import br.com.rsinet.HUB_TDD.manager.Driver;
 import br.com.rsinet.HUB_TDD.manager.PageObjectManager;
 import br.com.rsinet.HUB_TDD.pageObjects.BuscaPage;
 import br.com.rsinet.HUB_TDD.pageObjects.HomePage;
@@ -40,7 +40,7 @@ public class DeveBuscarPelaLupaTest {
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
-		driver = DriverFactory.getDriver();
+		driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 		PageObjectManager manager = new PageObjectManager(driver);
 		homePage = manager.getHomePage();
@@ -86,7 +86,7 @@ public class DeveBuscarPelaLupaTest {
 	public void tearDown(ITestResult result) throws IOException {
 		ExtentReport.statusReported(test, result, driver);
 		ExtentReport.quitExtent(extent);
-		DriverFactory.fecharDriver();
+		Driver.fecharDriver();
 	}
 
 }

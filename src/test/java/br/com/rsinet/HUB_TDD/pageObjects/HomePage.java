@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
+import br.com.rsinet.HUB_TDD.manager.Driver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class HomePage extends BasePage {
@@ -41,32 +41,35 @@ public class HomePage extends BasePage {
 	}
 
 	public void clicarCategoria(String Categoria) throws MalformedURLException {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
 		switch (Categoria) {
 		case "LAPTOPS":
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "LAPTOPS")));
+			Driver.getWait()
+					.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "LAPTOPS")));
 			clickToText((AndroidDriver<?>) driver, "LAPTOPS");
 			break;
 
 		case "HEADPHONES":
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "HEADPHONES")));
+			Driver.getWait()
+					.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "HEADPHONES")));
 			clickToText((AndroidDriver<?>) driver, "HEADPHONES");
 			break;
 
 		case "TABLETS":
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "TABLETS")));
+			Driver.getWait()
+					.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "TABLETS")));
 			clickToText((AndroidDriver<?>) driver, "TABLETS");
 			break;
 
 		case "SPEAKERS":
 			scrollToText((AndroidDriver<?>) driver, "SPEAKERS");
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "SPEAKERS")));
+			Driver.getWait()
+					.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "SPEAKERS")));
 			clickToText((AndroidDriver<?>) driver, "SPEAKERS");
 			break;
 
 		case "MICE":
 			scrollToText((AndroidDriver<?>) driver, "MICE");
-			wait.until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "MICE")));
+			Driver.getWait().until(ExpectedConditions.visibilityOf(elementToText((AndroidDriver<?>) driver, "MICE")));
 			clickToText((AndroidDriver<?>) driver, "MICE");
 			break;
 

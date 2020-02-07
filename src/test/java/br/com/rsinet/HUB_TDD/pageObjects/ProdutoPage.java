@@ -8,9 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.com.rsinet.HUB_TDD.manager.DriverFactory;
+import br.com.rsinet.HUB_TDD.manager.Driver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.nativekey.PressesKey;
@@ -39,6 +38,8 @@ public class ProdutoPage {
 	private WebElement itensTotal;
 
 	public String nomeProduto() {
+		Driver.getWait().until(
+				ExpectedConditions.elementToBeClickable(By.id("com.Advantage.aShopping:id/buttonProductAddToCart")));
 		return produtoNome.getText();
 	}
 
@@ -53,19 +54,19 @@ public class ProdutoPage {
 	}
 
 	public ProdutoPage colocarVinteItens() throws MalformedURLException {
-		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
-
+		Driver.getWait()
+				.until(ExpectedConditions.elementToBeClickable(By.id("com.Advantage.aShopping:id/textViewApply")));
 		((PressesKey) driver).pressKey(new KeyEvent(AndroidKey.NUMPAD_2));
 		((PressesKey) driver).pressKey(new KeyEvent(AndroidKey.NUMPAD_0));
-		wait.until(ExpectedConditions.textToBePresentInElement(itensTotal, "20"));
+		Driver.getWait().until(ExpectedConditions.textToBePresentInElement(itensTotal, "20"));
 		((PressesKey) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
 		addToCard.click();
 		return this;
 	}
 
 	public String qtdProdutoCarrinho() throws MalformedURLException {
-		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("com.Advantage.aShopping:id/textViewCartLength")));
+		Driver.getWait().until(
+				ExpectedConditions.presenceOfElementLocated(By.id("com.Advantage.aShopping:id/textViewCartLength")));
 		return qtdItensCarrinho.getText();
 	}
 

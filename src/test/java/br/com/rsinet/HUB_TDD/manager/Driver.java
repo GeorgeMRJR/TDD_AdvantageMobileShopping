@@ -5,11 +5,12 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class DriverFactory {
+public class Driver {
 
 	private static AndroidDriver<MobileElement> driver;
 
@@ -27,7 +28,7 @@ public class DriverFactory {
 
 		URL remoteUrl = new URL("http://127.0.0.1:4723/wd/hub");
 		driver = new AndroidDriver<MobileElement>(remoteUrl, desiredCapabilities);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		onImplicitlyWait();
 		return driver;
 	}
 
@@ -36,5 +37,17 @@ public class DriverFactory {
 			driver.quit();
 			driver = null;
 		}
+	}
+
+	public static void onImplicitlyWait() {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+
+	public static void offImplicitlyWait() {
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+	}
+
+	public static WebDriverWait getWait() {
+		return new WebDriverWait(driver, 10);
 	}
 }

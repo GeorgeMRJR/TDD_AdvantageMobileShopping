@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import br.com.rsinet.HUB_TDD.manager.Driver;
+
 public class MenuPage {
 
 	public MenuPage(WebDriver driver) {
@@ -13,13 +15,13 @@ public class MenuPage {
 
 	@FindBy(id = "com.Advantage.aShopping:id/textViewMenuUser")
 	private WebElement login;
-	
+
 	@FindBy(id = "com.Advantage.aShopping:id/textViewMenuSignOut")
 	private WebElement logOut;
-	
+
 	@FindBy(id = "com.Advantage.aShopping:id/imageViewMenu")
 	private WebElement menu;
-	
+
 	public void abrir() {
 		menu.click();
 	}
@@ -27,10 +29,13 @@ public class MenuPage {
 	public void clicarLogin() {
 		login.click();
 	}
-	
+
 	public boolean logado() {
 		try {
-			return logOut.isDisplayed();
+			Driver.offImplicitlyWait();
+			boolean displayed = logOut.isDisplayed();
+			Driver.onImplicitlyWait();
+			return displayed;
 		} catch (Exception e) {
 			return false;
 		}

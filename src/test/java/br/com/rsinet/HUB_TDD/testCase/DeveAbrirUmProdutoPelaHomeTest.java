@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.HUB_TDD.manager.DriverFactory;
+import br.com.rsinet.HUB_TDD.manager.Driver;
 import br.com.rsinet.HUB_TDD.manager.PageObjectManager;
 import br.com.rsinet.HUB_TDD.pageObjects.CadastroPage;
 import br.com.rsinet.HUB_TDD.pageObjects.CategoriaProdutoPage;
@@ -47,7 +47,7 @@ public class DeveAbrirUmProdutoPelaHomeTest {
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
-		driver = DriverFactory.getDriver();
+		driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 		PageObjectManager manager = new PageObjectManager(driver);
 		homePage = manager.getHomePage();
@@ -83,7 +83,7 @@ public class DeveAbrirUmProdutoPelaHomeTest {
 		menuPage.clicarLogin();
 		loginPage.clicarNovaConta();
 		((CadastroPage) cadastroPage//
-				.digitarUserName("carrinho" + new Random().nextInt(1000)).enter() //
+				.digitarUserName("carrinho" + new Random().nextInt(100) + new Random().nextInt(100)).enter() //
 				.digitarEmail("aaaaaa@abcd.com").enter() //
 				.digitarSenha("Abc123").enter() //
 				.digitarReSenha("Abc123").enter() //
@@ -108,7 +108,7 @@ public class DeveAbrirUmProdutoPelaHomeTest {
 	public void tearDown(ITestResult result) throws IOException {
 		ExtentReport.statusReported(test, result, driver);
 		ExtentReport.quitExtent(extent);
-		DriverFactory.fecharDriver();
+		Driver.fecharDriver();
 	}
 
 }
