@@ -23,7 +23,6 @@ import br.com.rsinet.HUB_TDD.pageObjects.CadastroPage;
 import br.com.rsinet.HUB_TDD.pageObjects.HomePage;
 import br.com.rsinet.HUB_TDD.pageObjects.LoginPage;
 import br.com.rsinet.HUB_TDD.pageObjects.MenuPage;
-import br.com.rsinet.HUB_TDD.suporte.ExcelConsumer;
 import br.com.rsinet.HUB_TDD.suporte.ExcelUtils;
 import br.com.rsinet.HUB_TDD.suporte.ExtentReport;
 import io.appium.java_client.MobileElement;
@@ -40,7 +39,6 @@ public class DeveCadastrarUmUsuarioTest {
 	private ExtentReports extent;
 	private String testName;
 	private ExtentTest test;
-	private ExcelConsumer excel;
 
 	@BeforeTest
 	public void setUpReport() {
@@ -56,36 +54,44 @@ public class DeveCadastrarUmUsuarioTest {
 		menuPage = manager.getMenuPage();
 		cadastroPage = manager.getCadastroPage();
 		loginPage = manager.getLoginPage();
-		excel = new ExcelConsumer();
 	}
 
-	@Test
-	public void deveCadastrarUmUsuario() throws Throwable {
-
+	@Test(dataProvider = "excelData", dataProviderClass = ExcelUtils.class)
+	public void deveCadastrarUmUsuario( //
+			String Username, //
+			String email, //
+			String senha, //
+			String reSenha, //
+			String nome, //
+			String sobreNome, //
+			String telefone, //
+			String pais, //
+			String estado, //
+			String endereco, //
+			String cidade, //
+			String codPostal //
+	) throws Throwable {
 		// report
 		testName = new Throwable().getStackTrace()[0].getMethodName();
 		test = ExtentReport.createTest(testName);
 
-		// massa
-		ExcelUtils.setExcelFile("CadastrarNovoCliente_Po");
-		int row = 2;
 		// teste
 		homePage.clicarMenu();
 		menuPage.clicarLogin();
 		loginPage.clicarNovaConta();
 		((CadastroPage) cadastroPage //
-				.digitarUserName(excel.getNomeUsuario(row) + new Random().nextInt(1000)).enter() //
-				.digitarEmail(excel.getEmail(row)).enter() //
-				.digitarSenha(excel.getSenha(row)).enter() //
-				.digitarReSenha(excel.getReSenha(row)).enter() //
-				.digitarNome(excel.getPrimeiroNome(row)).enter() //
-				.digitarSobreNome(excel.getSegundoNome(row)).enter() //
-				.digitarTelefone(excel.getTelefone(row)).enter() //
-				.escolherContinente(excel.getContinente(row)) //
-				.digitarEstado(excel.getEstado(row)).enter() //
-				.digitarEndereco(excel.getEndereco(row)).enter() //
-				.digitarCidade(excel.getCidade(row)).enter() //
-				.digitarCep(excel.getCodPostal(row)).enter() //
+				.digitarUserName(Username + new Random().nextInt(1000)).enter() //
+				.digitarEmail(email).enter() //
+				.digitarSenha(senha).enter() //
+				.digitarReSenha(reSenha).enter() //
+				.digitarNome(nome).enter() //
+				.digitarSobreNome(sobreNome).enter() //
+				.digitarTelefone(telefone).enter() //
+				.escolherContinente(pais) //
+				.digitarEstado(estado).enter() //
+				.digitarEndereco(endereco).enter() //
+				.digitarCidade(cidade).enter() //
+				.digitarCep(codPostal).enter() //
 				.scroll(0.9, 0.2) //
 		).registrar(); //
 		homePage.clicarMenu();
@@ -94,33 +100,43 @@ public class DeveCadastrarUmUsuarioTest {
 
 	}
 
-	@Test
-	public void naoDeveCadastrarUsuarioJaCadastrado() throws Throwable {
+	@Test(dataProvider = "excelData", dataProviderClass = ExcelUtils.class)
+	public void naoDeveCadastrarUsuarioJaCadastrado( //
+			String Username, //
+			String email, //
+			String senha, //
+			String reSenha, //
+			String nome, //
+			String sobreNome, //
+			String telefone, //
+			String pais, //
+			String estado, //
+			String endereco, //
+			String cidade, //
+			String codPostal //
+	) throws Throwable {
 
 		// report
 		testName = new Throwable().getStackTrace()[0].getMethodName();
 		test = ExtentReport.createTest(testName);
-		// massa
-		ExcelUtils.setExcelFile("CadastrarNovoCliente_Ne");
-		int row = 2;
+
 		// teste
 		homePage.clicarMenu();
 		menuPage.clicarLogin();
 		loginPage.clicarNovaConta();
-
 		((CadastroPage) cadastroPage //
-				.digitarUserName(excel.getNomeUsuario(row)).enter() //
-				.digitarEmail(excel.getEmail(row)).enter() //
-				.digitarSenha(excel.getSenha(row)).enter() //
-				.digitarReSenha(excel.getReSenha(row)).enter() //
-				.digitarNome(excel.getPrimeiroNome(row)).enter() //
-				.digitarSobreNome(excel.getSegundoNome(row)).enter() //
-				.digitarTelefone(excel.getTelefone(row)).enter() //
-				.escolherContinente(excel.getContinente(row)) //
-				.digitarEstado(excel.getEstado(row)).enter() //
-				.digitarEndereco(excel.getEndereco(row)).enter() //
-				.digitarCidade(excel.getCidade(row)).enter() //
-				.digitarCep(excel.getCodPostal(row)).enter() //
+				.digitarUserName(Username).enter() //
+				.digitarEmail(email).enter() //
+				.digitarSenha(senha).enter() //
+				.digitarReSenha(reSenha).enter() //
+				.digitarNome(nome).enter() //
+				.digitarSobreNome(sobreNome).enter() //
+				.digitarTelefone(telefone).enter() //
+				.escolherContinente(pais) //
+				.digitarEstado(estado).enter() //
+				.digitarEndereco(endereco).enter() //
+				.digitarCidade(cidade).enter() //
+				.digitarCep(codPostal).enter() //
 				.scroll(0.9, 0.2) //
 		).registrar(); //
 		homePage.clicarMenu();

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-caseTest">
-              <span class="suite-name border-passed">caseTest</span>
+              <span class="suite-name border-failed">caseTest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-caseTest" class="hide-methods failed suite-caseTest"> (hide)</a> <!-- hide-methods failed suite-caseTest -->
+                      <a href="#" panel-name="suite-caseTest" class="show-methods failed suite-caseTest"> (show)</a> <!-- show-methods failed suite-caseTest -->
+                    </span>
+                    <div class="method-list-content failed suite-caseTest">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-caseTest" title="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest" hash-for-method="naoDeveCadastrarUsuarioJaCadastrado(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...)">naoDeveCadastrarUsuarioJaCadastrado(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-caseTest -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,7 +131,17 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-caseTest" title="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest" hash-for-method="deveCadastrarUmUsuario">deveCadastrarUmUsuario</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-caseTest" title="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest" hash-for-method="deveCadastrarUmUsuario(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...)">deveCadastrarUmUsuario(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-caseTest" title="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest" hash-for-method="deveCadastrarUmUsuario(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...)">deveCadastrarUmUsuario(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-caseTest" title="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest" hash-for-method="deveCadastrarUmUsuario(AnaTester, AnaTester@teste.com, Abc123, Abc123, Ana, da silva, 989997979, Japan, SP, Av.Gal, sorocab...)">deveCadastrarUmUsuario(AnaTester, AnaTester@teste.com, Abc123, Abc123, Ana, da silva, 989997979, Japan, SP, Av.Gal, sorocab...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -127,7 +151,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-caseTest" title="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest" hash-for-method="naoDeveCadastrarUsuarioJaCadastrado">naoDeveCadastrarUsuarioJaCadastrado</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-caseTest" title="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest" hash-for-method="naoDeveCadastrarUsuarioJaCadastrado(AnaTester, AnaTester@teste.com, Abc123, Abc1234, Ana, da silva, 989997979, Japan, SP, Av.Gal, soroca...)">naoDeveCadastrarUsuarioJaCadastrado(AnaTester, AnaTester@teste.com, Abc123, Abc1234, Ana, da silva, 989997979, Japan, SP, Av.Gal, soroca...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-caseTest" title="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest" hash-for-method="naoDeveCadastrarUsuarioJaCadastrado(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...)">naoDeveCadastrarUsuarioJaCadastrado(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-caseTest -->
@@ -142,6 +171,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-caseTest" class="panel caseTest">
+          <div class="suite-caseTest-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="naoDeveCadastrarUsuarioJaCadastrado(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...)">
+                  </a> <!-- naoDeveCadastrarUsuarioJaCadastrado(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...) -->
+                  <span class="method-name">naoDeveCadastrarUsuarioJaCadastrado</span>
+                  <span class="parameters">(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, sorocaba, 18060605)</span>
+                  <div class="stack-trace">java.lang.AssertionError: did not expect to find [false] but found [true]
+	at br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest.naoDeveCadastrarUsuarioJaCadastrado(DeveCadastrarUmUsuarioTest.java:144)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-caseTest-class-failed -->
           <div class="suite-caseTest-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -172,16 +222,42 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="deveCadastrarUmUsuario">
-                  </a> <!-- deveCadastrarUmUsuario -->
+                  <a name="deveCadastrarUmUsuario(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...)">
+                  </a> <!-- deveCadastrarUmUsuario(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...) -->
                   <span class="method-name">deveCadastrarUmUsuario</span>
+                  <span class="parameters">(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, sorocaba, 18060605)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="naoDeveCadastrarUsuarioJaCadastrado">
-                  </a> <!-- naoDeveCadastrarUsuarioJaCadastrado -->
+                  <a name="deveCadastrarUmUsuario(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...)">
+                  </a> <!-- deveCadastrarUmUsuario(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...) -->
+                  <span class="method-name">deveCadastrarUmUsuario</span>
+                  <span class="parameters">(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Gal, sorocaba, 18060605)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deveCadastrarUmUsuario(AnaTester, AnaTester@teste.com, Abc123, Abc123, Ana, da silva, 989997979, Japan, SP, Av.Gal, sorocab...)">
+                  </a> <!-- deveCadastrarUmUsuario(AnaTester, AnaTester@teste.com, Abc123, Abc123, Ana, da silva, 989997979, Japan, SP, Av.Gal, sorocab...) -->
+                  <span class="method-name">deveCadastrarUmUsuario</span>
+                  <span class="parameters">(AnaTester, AnaTester@teste.com, Abc123, Abc123, Ana, da silva, 989997979, Japan, SP, Av.Gal, sorocaba, 18060605)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="naoDeveCadastrarUsuarioJaCadastrado(AnaTester, AnaTester@teste.com, Abc123, Abc1234, Ana, da silva, 989997979, Japan, SP, Av.Gal, soroca...)">
+                  </a> <!-- naoDeveCadastrarUsuarioJaCadastrado(AnaTester, AnaTester@teste.com, Abc123, Abc1234, Ana, da silva, 989997979, Japan, SP, Av.Gal, soroca...) -->
                   <span class="method-name">naoDeveCadastrarUsuarioJaCadastrado</span>
+                  <span class="parameters">(AnaTester, AnaTester@teste.com, Abc123, Abc1234, Ana, da silva, 989997979, Japan, SP, Av.Gal, sorocaba, 18060605)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="naoDeveCadastrarUsuarioJaCadastrado(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...)">
+                  </a> <!-- naoDeveCadastrarUsuarioJaCadastrado(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...) -->
+                  <span class="method-name">naoDeveCadastrarUsuarioJaCadastrado</span>
+                  <span class="parameters">(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Gal, sorocaba, 18060605)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -262,36 +338,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'deveCadastrarUmUsuario')
 data.setCell(0, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest')
-data.setCell(0, 3, 50857);
+data.setCell(0, 3, 55349);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'naoDeveCadastrarUsuarioJaCadastrado')
 data.setCell(1, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest')
-data.setCell(1, 3, 49360);
+data.setCell(1, 3, 54975);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'naoDeveAceitarMaisDeDezItensNoCarrinho')
-data.setCell(2, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest')
-data.setCell(2, 3, 29717);
+data.setCell(2, 1, 'naoDeveCadastrarUsuarioJaCadastrado')
+data.setCell(2, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest')
+data.setCell(2, 3, 42234);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'deveAbrirUmProdutoPelaCategoria')
-data.setCell(3, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest')
-data.setCell(3, 3, 7638);
+data.setCell(3, 1, 'naoDeveCadastrarUsuarioJaCadastrado')
+data.setCell(3, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest')
+data.setCell(3, 3, 40415);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'deveBuscarUmProdutoExistente')
-data.setCell(4, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest')
-data.setCell(4, 3, 4151);
+data.setCell(4, 1, 'deveCadastrarUmUsuario')
+data.setCell(4, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest')
+data.setCell(4, 3, 39817);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'deveBuscarUmProdutoInexistente')
-data.setCell(5, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest')
-data.setCell(5, 3, 3534);
+data.setCell(5, 1, 'deveCadastrarUmUsuario')
+data.setCell(5, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest')
+data.setCell(5, 3, 39720);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'naoDeveAceitarMaisDeDezItensNoCarrinho')
+data.setCell(6, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest')
+data.setCell(6, 3, 26558);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'deveAbrirUmProdutoPelaCategoria')
+data.setCell(7, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest')
+data.setCell(7, 3, 7871);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'deveBuscarUmProdutoExistente')
+data.setCell(8, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest')
+data.setCell(8, 3, 3940);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'deveBuscarUmProdutoInexistente')
+data.setCell(9, 2, 'br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest')
+data.setCell(9, 3, 3708);
 window.suiteTableData['caseTest']= { tableData: data, tableDiv: 'times-div-caseTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-caseTest">
               </div> <!-- times-div-caseTest -->
             </div> <!-- times-div -->
@@ -327,95 +419,145 @@ return data;
               <div class="chronological-class-name">br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUpReport</span>
-                <span class="method-start">77 ms</span>
+                <span class="method-start">85 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUpReport</span>
-                <span class="method-start">77 ms</span>
+                <span class="method-start">86 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.HUB_TDD.testCase.DeveAbrirUmProdutoPelaHomeTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">95 ms</span>
+                <span class="method-start">103 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">deveAbrirUmProdutoPelaCategoria</span>
-                <span class="method-start">9823 ms</span>
+                <span class="method-start">7839 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=deveAbrirUmProdutoPelaCategoria status=SUCCESS method=DeveAbrirUmProdutoPelaHomeTes...)</span>
-                <span class="method-start">17463 ms</span>
+                <span class="method-start">15712 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">18918 ms</span>
+                <span class="method-start">16563 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">naoDeveAceitarMaisDeDezItensNoCarrinho</span>
-                <span class="method-start">27665 ms</span>
+                <span class="method-start">22947 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=naoDeveAceitarMaisDeDezItensNoCarrinho status=SUCCESS method=DeveAbrirUmProdutoPela...)</span>
-                <span class="method-start">57383 ms</span>
+                <span class="method-start">49506 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.HUB_TDD.testCase.DeveBuscarPelaLupaTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">58749 ms</span>
+                <span class="method-start">50335 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">deveBuscarUmProdutoExistente</span>
-                <span class="method-start">68204 ms</span>
+                <span class="method-start">57000 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=deveBuscarUmProdutoExistente status=SUCCESS method=DeveBuscarPelaLupaTest.deveBusca...)</span>
-                <span class="method-start">72356 ms</span>
+                <span class="method-start">60941 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">73761 ms</span>
+                <span class="method-start">61826 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">deveBuscarUmProdutoInexistente</span>
-                <span class="method-start">83171 ms</span>
+                <span class="method-start">68607 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=deveBuscarUmProdutoInexistente status=SUCCESS method=DeveBuscarPelaLupaTest.deveBus...)</span>
-                <span class="method-start">86709 ms</span>
+                <span class="method-start">72316 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">87875 ms</span>
+                <span class="method-start">73671 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">deveCadastrarUmUsuario</span>
-                <span class="method-start">97437 ms</span>
+                <span class="method-name">deveCadastrarUmUsuario(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...)</span>
+                <span class="method-start">80708 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=deveCadastrarUmUsuario status=SUCCESS method=DeveCadastrarUmUsuarioTest.deveCadastr...)</span>
-                <span class="method-start">148295 ms</span>
+                <span class="method-start">120429 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">149885 ms</span>
+                <span class="method-start">121744 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">naoDeveCadastrarUsuarioJaCadastrado</span>
-                <span class="method-start">158924 ms</span>
+                <span class="method-name">deveCadastrarUmUsuario(AnaTester, AnaTester@teste.com, Abc123, Abc123, Ana, da silva, 989997979, Japan, SP, Av.Gal, sorocab...)</span>
+                <span class="method-start">129581 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=deveCadastrarUmUsuario status=SUCCESS method=DeveCadastrarUmUsuarioTest.deveCadastr...)</span>
+                <span class="method-start">184930 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">186089 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">deveCadastrarUmUsuario(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...)</span>
+                <span class="method-start">193483 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=deveCadastrarUmUsuario status=SUCCESS method=DeveCadastrarUmUsuarioTest.deveCadastr...)</span>
+                <span class="method-start">233302 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">234501 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">naoDeveCadastrarUsuarioJaCadastrado(GeorgeTester, GeorgeTester@teste.com, Abc123, Abc123, George, da silva, 989997979, Brazil, SP, Av.Ga...)</span>
+                <span class="method-start">241853 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=naoDeveCadastrarUsuarioJaCadastrado status=SUCCESS method=DeveCadastrarUmUsuarioTes...)</span>
-                <span class="method-start">208285 ms</span>
+                <span class="method-start">284088 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">285203 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">naoDeveCadastrarUsuarioJaCadastrado(AnaTester, AnaTester@teste.com, Abc123, Abc1234, Ana, da silva, 989997979, Japan, SP, Av.Gal, soroca...)</span>
+                <span class="method-start">292466 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=naoDeveCadastrarUsuarioJaCadastrado status=SUCCESS method=DeveCadastrarUmUsuarioTes...)</span>
+                <span class="method-start">347441 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">348491 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">naoDeveCadastrarUsuarioJaCadastrado(PauloTester, PauloTester@teste.com, Abc123, Abc123, Paulo, da silva, 989997979, Brazil, SP, Av.Gal, ...)</span>
+                <span class="method-start">356097 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=naoDeveCadastrarUsuarioJaCadastrado status=FAILURE method=DeveCadastrarUmUsuarioTes...)</span>
+                <span class="method-start">396513 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

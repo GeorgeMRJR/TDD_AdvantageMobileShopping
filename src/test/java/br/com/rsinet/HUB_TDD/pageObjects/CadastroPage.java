@@ -2,6 +2,7 @@ package br.com.rsinet.HUB_TDD.pageObjects;
 
 import java.net.MalformedURLException;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import br.com.rsinet.HUB_TDD.entity.Usuario;
 import br.com.rsinet.HUB_TDD.manager.Driver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
@@ -160,6 +162,23 @@ public class CadastroPage extends BasePage {
 				.until(ExpectedConditions.presenceOfElementLocated(By.id("com.Advantage.aShopping:id/imageViewMenu")));
 
 		return this;
+	}
+
+	public void preencherFormulario(List<Usuario> usuarios) throws MalformedURLException {
+		for (Usuario usuario : usuarios) {
+			this.digitarUserName(usuario.getNomeDeUsuario() + new Random().nextInt(1000)).enter() //
+					.digitarEmail(usuario.getEmail()).enter() //
+					.digitarSenha(usuario.getSenha()).enter() //
+					.digitarReSenha(usuario.getReSenha()).enter() //
+					.digitarNome(usuario.getNome()).enter() //
+					.digitarSobreNome(usuario.getSobreNome()).enter() //
+					.digitarTelefone(usuario.getTelefone()).enter() //
+					.escolherContinente(usuario.getPais()) //
+					.digitarEstado(usuario.getEstado()).enter() //
+					.digitarEndereco(usuario.getEndereco()).enter() //
+					.digitarCidade(usuario.getCidade()).enter() //
+					.digitarCep(usuario.getCep()).enter(); //
+		}
 	}
 
 }

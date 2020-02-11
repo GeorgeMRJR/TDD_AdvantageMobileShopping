@@ -1,80 +1,96 @@
 package br.com.rsinet.HUB_TDD.suporte;
 
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.IOException;
+import java.lang.reflect.Method;
 
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.DataProvider;
 
 public class ExcelUtils {
+	private XSSFWorkbook workbook;
+	private XSSFSheet sheet;
+	private XSSFCell cell;
+	private String stringCellValue;
+	private int totalRows;
+	private int totalColums;
 
-	private static XSSFSheet ExcelWSheet;
-	private static XSSFWorkbook ExcelWBook;
-	private static XSSFCell Cell;
-	private static XSSFRow Row;
-
-	public static void setExcelFile(String SheetName) throws Exception {
-
-		try {
-
-			FileInputStream ExcelFile = new FileInputStream("src/test/resources/TDD_AdvantageOnlineShoppingData.xlsx");
-			ExcelWBook = new XSSFWorkbook(ExcelFile);
-			ExcelWSheet = ExcelWBook.getSheet(SheetName);
-
-		} catch (Exception e) {
-
-			throw (e);
-		}
+	public ExcelUtils() throws IOException {
+		File file = new File("src/test/resources/TDD_AdvantageOnlineShoppingData.xlsx");
+		FileInputStream fis = new FileInputStream(file);
+		workbook = new XSSFWorkbook(fis);
 	}
 
-	public static String getCellData(int RowNum, int ColNum) throws Exception {
+	@DataProvider(name = "excelData")
+	public Object[][] readExcel(Method testMethod) throws IOException {
+		String methodName = testMethod.getName();
+		System.out.println(">>>>>>>>>>>>>>>>>>>" + methodName);
+//		switch (methodName) {
+//		case "deveCadastrarUmUsuario":
+//		planilha = "CadastrarNovoCliente_Po";
 
-		try {
+		sheet = workbook.getSheet("CadastrarNovoCliente_Po");
+		totalRows = sheet.getLastRowNum();
+		totalColums = sheet.getRow(0).getPhysicalNumberOfCells();
+		System.out.println(">>>>>>>>>>>>>>linhas " + totalRows);
+		System.out.println(">>>>>>>>>>>>>>colunas " + totalColums);
 
-			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-			String CellData = Cell.getStringCellValue();
+		Object deveCadastrarUmUsuario[][] = new Object[totalRows][totalColums];
 
-			return CellData;
+		for (int i = 0; i < totalRows; i++) {
+			Row row = sheet.getRow(i + 1);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
 
-		} catch (Exception e) {
+				cell = sheet.getRow(i + 1).getCell(j);
+				try {
+					stringCellValue = cell.getStringCellValue();
+				} catch (Exception e) {
+					stringCellValue = String.valueOf((int) cell.getNumericCellValue());
+				}
 
-			return "";
-
-		}
-
-	}
-
-	public static void setCellData(String Result, int RowNum, int ColNum) throws Exception {
-
-		try {
-
-			Row = ExcelWSheet.getRow(RowNum);
-			// Cell = Row.getCell(ColNum, Row.);
-
-			if (Cell == null) {
-
-				Cell = Row.createCell(ColNum);
-				Cell.setCellValue(Result);
-
-			} else {
-
-				Cell.setCellValue(Result);
+				System.out.print(stringCellValue + "|| ");
+				deveCadastrarUmUsuario[i][j] = (stringCellValue);
 
 			}
+			System.out.println();
+		}
 
-			FileOutputStream fileOut = new FileOutputStream("src/test/resources/TDD_AdvantageOnlineShoppingData.xlsx");
+		sheet = workbook.getSheet("CadastrarNovoCliente_Ne");
+		totalRows = sheet.getLastRowNum();
+		totalColums = sheet.getRow(0).getPhysicalNumberOfCells();
+		System.out.println(">>>>>>>>>>>>>>linhas " + totalRows);
+		System.out.println(">>>>>>>>>>>>>>colunas " + totalColums);
 
-			ExcelWBook.write(fileOut);
+		Object naoDeveCadastrarUsuarioJaCadastrado[][] = new Object[totalRows][totalColums];
 
-			fileOut.flush();
-			fileOut.close();
+		for (int i = 0; i < totalRows; i++) {
+			Row row = sheet.getRow(i + 1);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
 
-		} catch (Exception e) {
+				cell = sheet.getRow(i + 1).getCell(j);
+				try {
+					stringCellValue = cell.getStringCellValue();
+				} catch (Exception e) {
+					stringCellValue = String.valueOf((int) cell.getNumericCellValue());
+				}
 
-			throw (e);
+				System.out.print(stringCellValue + "|| ");
+				naoDeveCadastrarUsuarioJaCadastrado[i][j] = (stringCellValue);
 
+			}
+			System.out.println();
+		}
+
+		if (methodName.equalsIgnoreCase("deveCadastrarUmUsuario")) {
+			return deveCadastrarUmUsuario;
+		} else if (methodName.equalsIgnoreCase("naoDeveCadastrarUsuarioJaCadastrado")) {
+			return naoDeveCadastrarUsuarioJaCadastrado;
+		} else {
+			return null;
 		}
 
 	}
