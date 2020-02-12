@@ -70,8 +70,10 @@ public class ExcelUtils {
 				cell = sheet.getRow(i + 1).getCell(j);
 				try {
 					stringCellValue = cell.getStringCellValue();
-				} catch (Exception e) {
+				} catch (IllegalStateException e) {
 					stringCellValue = String.valueOf((int) cell.getNumericCellValue());
+				} catch (Exception e) {
+					stringCellValue = "";
 				}
 
 				System.out.print(stringCellValue + "|| ");

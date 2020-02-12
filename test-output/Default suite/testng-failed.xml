@@ -5,8 +5,8 @@
     <classes>
       <class name="br.com.rsinet.HUB_TDD.testCase.DeveCadastrarUmUsuarioTest">
         <methods>
+          <include name="deveCadastrarUmUsuario" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="naoDeveCadastrarUsuarioJaCadastrado"/>
           <include name="setUpReport"/>
           <include name="setUp"/>
         </methods>
