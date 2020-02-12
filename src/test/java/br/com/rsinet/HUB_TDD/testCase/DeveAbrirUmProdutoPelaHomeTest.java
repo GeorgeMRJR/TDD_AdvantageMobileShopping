@@ -23,6 +23,7 @@ import br.com.rsinet.HUB_TDD.pageObjects.HomePage;
 import br.com.rsinet.HUB_TDD.pageObjects.LoginPage;
 import br.com.rsinet.HUB_TDD.pageObjects.MenuPage;
 import br.com.rsinet.HUB_TDD.pageObjects.ProdutoPage;
+import br.com.rsinet.HUB_TDD.suporte.ExcelUtils;
 import br.com.rsinet.HUB_TDD.suporte.ExtentReport;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -58,16 +59,15 @@ public class DeveAbrirUmProdutoPelaHomeTest {
 		loginPage = manager.getLoginPage();
 	}
 
-	@Test
-	public void deveAbrirUmProdutoPelaCategoria() throws InterruptedException, MalformedURLException {
+	@Test(dataProvider = "excelData", dataProviderClass = ExcelUtils.class)
+	public void deveAbrirUmProdutoPelaCategoria(String categoria, String produto) throws MalformedURLException {
 
 		// report
 		testName = new Throwable().getStackTrace()[0].getMethodName();
 		test = ExtentReport.createTest(testName);
 
 		// teste
-		String produto = "HP Z3600 Wireless Mouse";
-		String categoria = "MICE";
+
 		homePage.clicarCategoria(categoria);
 		categoriaProdutoPage.clicarproduto(produto.toUpperCase());
 		String produtoAtual = produtoPage.nomeProduto();
@@ -75,15 +75,19 @@ public class DeveAbrirUmProdutoPelaHomeTest {
 		Assert.assertEquals(produtoAtual.toUpperCase(), produto.toUpperCase());
 	}
 
-	@Test
-	public void naoDeveAceitarMaisDeDezItensNoCarrinho() throws MalformedURLException {
-		String produto = "HP ENVY - 17T TOUCH LAPTOP";
-		String categoria = "LAPTOPS";
+	@Test(dataProvider = "excelData", dataProviderClass = ExcelUtils.class)
+	public void naoDeveAceitarMaisDeDezItensNoCarrinho(String categoria, String produto) throws MalformedURLException {
+
+		// report
+		testName = new Throwable().getStackTrace()[0].getMethodName();
+		test = ExtentReport.createTest(testName);
+		// teste
+
 		homePage.clicarMenu();
 		menuPage.clicarLogin();
 		loginPage.clicarNovaConta();
 		((CadastroPage) cadastroPage//
-				.digitarUserName("carrinho" + new Random().nextInt(100) + new Random().nextInt(100)).enter() //
+				.digitarUserName("carrinho" + new Random().nextInt(100000)).enter() //
 				.digitarEmail("aaaaaa@abcd.com").enter() //
 				.digitarSenha("Abc123").enter() //
 				.digitarReSenha("Abc123").enter() //
@@ -92,7 +96,7 @@ public class DeveAbrirUmProdutoPelaHomeTest {
 		).registrar(); //
 
 		homePage.clicarCategoria(categoria);
-		categoriaProdutoPage.clicarproduto(produto);
+		categoriaProdutoPage.clicarproduto(produto.toUpperCase());
 
 		String qtdProdutoCarrinho = produtoPage //
 				.clicarQtd() //

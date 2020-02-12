@@ -13,7 +13,7 @@ public class Screenshot {
 	public static String gerarScreenShot(WebDriver driver, String nome) {
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-		String destino = System.getProperty("user.dir") + "/target/Screenshot/" + nome + "-"
+		String destino = System.getProperty("user.dir") + "/report/Screenshot/" + nome + "-"
 				+ Generator.dataHoraParaArquivo() + ".png";
 
 		try {

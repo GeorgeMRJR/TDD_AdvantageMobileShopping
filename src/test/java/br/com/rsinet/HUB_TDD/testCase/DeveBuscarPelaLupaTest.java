@@ -19,6 +19,7 @@ import br.com.rsinet.HUB_TDD.manager.PageObjectManager;
 import br.com.rsinet.HUB_TDD.pageObjects.BuscaPage;
 import br.com.rsinet.HUB_TDD.pageObjects.HomePage;
 import br.com.rsinet.HUB_TDD.pageObjects.ProdutoPage;
+import br.com.rsinet.HUB_TDD.suporte.ExcelUtils;
 import br.com.rsinet.HUB_TDD.suporte.ExtentReport;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -49,32 +50,30 @@ public class DeveBuscarPelaLupaTest {
 
 	}
 
-	@Test
-	public void deveBuscarUmProdutoExistente() throws InterruptedException {
+	@Test(dataProvider = "excelData", dataProviderClass = ExcelUtils.class)
+	public void deveBuscarUmProdutoExistente(String produto) throws InterruptedException {
 
 //		// report
 		testName = new Throwable().getStackTrace()[0].getMethodName();
 		test = ExtentReport.createTest(testName);
 
 		// teste
-		String produto = "HP CHROMEBOOK 14 G1(ENERGY STAR)";
 		homePage.buscar(produto);
 		homePage.clicarLupa();
 		buscaPage.clicarproduto();
 		String atual = produtoPage.nomeProduto();
 
-		Assert.assertEquals(atual, produto);
+		Assert.assertEquals(atual, produto.toUpperCase());
 	}
 
-	@Test
-	public void deveBuscarUmProdutoInexistente() throws InterruptedException {
+	@Test(dataProvider = "excelData", dataProviderClass = ExcelUtils.class)
+	public void deveBuscarUmProdutoInexistente(String produto) throws InterruptedException {
 
 		// report
 		testName = new Throwable().getStackTrace()[0].getMethodName();
 		test = ExtentReport.createTest(testName);
 
 		// teste
-		String produto = "Iphone";
 		homePage.buscar(produto);
 		homePage.clicarLupa();
 		String txtNaoEncontrado = buscaPage.ProdutoNaoEncontrado();

@@ -18,8 +18,8 @@ public class ExtentReport {
 	private static ExtentTest test;
 
 	public static ExtentReports setReport() {
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/target/"
-				+ Generator.dataHoraParaArquivo() + ".html");
+		htmlReporter = new ExtentHtmlReporter(
+				System.getProperty("user.dir") + "/report/" + Generator.dataHoraParaArquivo() + ".html");
 
 		htmlReporter.config().setDocumentTitle("TDD - Advantage Monile Shopping");
 		htmlReporter.config().setReportName("Relatorio AdvantageMonileShopping");
@@ -36,8 +36,7 @@ public class ExtentReport {
 		extent.setSystemInfo("TestNG", "7.0.0");
 		extent.setSystemInfo("Maven", "4.0.0");
 		extent.setSystemInfo("Java Version", "1.8");
-		
-		
+
 		return extent;
 	}
 
